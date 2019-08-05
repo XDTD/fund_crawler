@@ -3,9 +3,9 @@
 
 ## 主要URL
 
-1. 公司列表：[http://fund.eastmoney.com/js/jjjz_gs.js?dt=1463791574015]()
+1. 公司列表：[http://fund.eastmoney.com/js/jjjz_gs.js]()
 2. 基金列表：http://fund.eastmoney.com/js/fundcode_search.js
-3. 基金信息1：http://fund.eastmoney.com/pingzhongdata/'+code+'.js‘  其中,code为6位整数，如000001的URL位=为http://fund.eastmoney.com/pingzhongdata/000001.js‘
+3. 基金信息1：http://fund.eastmoney.com/pingzhongdata/'+code+'.js‘  其中,code为6位整数，如000001的URL位=为http://fund.eastmoney.com/pingzhongdata/000001.js
 4. 基金信息2:http://fund.eastmoney.com/f10/tsdata_'+code+'.html'，同上
 5. 基金经理信息:http://fundf10.eastmoney.com/jjjl_'+code+'.html',同上
 
