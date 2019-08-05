@@ -72,7 +72,7 @@ def solve_fund_info():
 
 
 def solve_f10_data():
-    rootDir = 'E:\\CODE/python/Deecamp/Proj/Data/f10_ts/'
+    rootDir = 'Data/f10_ts/'
     org_data_list = data_read(rootDir)
     data_list = {}
     data_list['基金号'] = []
@@ -209,7 +209,7 @@ def solve_crawler3():
 
 
 def solve_manager_info():
-    rootDir = 'E:\\CODE/python/Deecamp/Proj/Data/managerInfo/'
+    rootDir = 'Data/managerInfo/'
     org_data_list = data_read(rootDir)
     name_list = []
     manager_info_list={'name':[],'code':[]}
