@@ -3,7 +3,7 @@
 
 ## 主要URL
 
-1. 公司列表：[http://fund.eastmoney.com/js/jjjz_gs.js]()
+1. 公司列表(Github上直接打开好像会提示not found,复制到浏览器上方直接进入即可)：[http://fund.eastmoney.com/js/jjjz_gs.js]()
 2. 基金列表：http://fund.eastmoney.com/js/fundcode_search.js
 3. 基金信息1：http://fund.eastmoney.com/pingzhongdata/'+code+'.js‘  其中,code为6位整数，如000001的URL位=为http://fund.eastmoney.com/pingzhongdata/000001.js
 4. 基金信息2:http://fund.eastmoney.com/f10/tsdata_'+code+'.html'，同上
@@ -17,6 +17,6 @@
 
 进入main.py执行即可
 
-**注：**除了solve开头的函数依赖于之前函数的下载文件，其他函数之间相互独立无先后顺序可以分别执行
+注：除了solve开头的函数依赖于之前函数的下载文件，其他函数之间相互独立无先后顺序可以分别执行
 
 数据量太大只上传部分关键数据
