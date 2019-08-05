@@ -4,7 +4,7 @@ from MyCrawyer import *
 
 if __name__ == '__main__':
     # 获取公司列表
-    url_company = 'http:://fund.eastmoney.com/js/jjjz_gs.js?dt=1463791574015'
+    url_company = 'http://fund.eastmoney.com/js/jjjz_gs.js?dt=1463791574015'
     get_company_list(url_company)
     # 获取基金列表
     url = 'http://fund.eastmoney.com/js/fundcode_search.js'
