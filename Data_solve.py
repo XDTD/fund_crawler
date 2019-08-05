@@ -101,7 +101,7 @@ def solve_f10_data():
 
 
 def solve_crawler3():
-    df = pd.read_csv('Data/crwaler3.csv',encoding='ANSI')
+    df = pd.read_csv('Data/crawler3.csv', encoding='ANSI')
     data_list = {}
     # 经理信息
     data_list['基金经理'] = []

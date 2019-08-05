@@ -22,4 +22,4 @@ if __name__ == '__main__':
     # 基金经理信息处理
     solve_manager_info()
     # pingzhong data 处理
-    solve_crawler3()
+    # solve_crawler3()
