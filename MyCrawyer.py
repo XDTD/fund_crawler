@@ -109,10 +109,7 @@ def get_fund_info(code):
             data_list[var_name] = [tmp[1]]
         return data_list
 
-# url_company = 'http:://fund.eastmoney.com/js/jjjz_gs.js?dt=1463791574015'
-# get_company_list(url_company)
-# url = 'http://fund.eastmoney.com/js/fundcode_search.js'
-# get_fund_list(url)
+
 
 
 def get_pingzhong_data():
@@ -152,7 +149,7 @@ def get_pingzhong_data():
                 else:
                     data[key].append('')
     df = pd.DataFrame(data)
-    df.to_csv('Data/crawler2.csv',encoding='ANSI')
+    df.to_csv('Data/crawler3.csv',encoding='ANSI')
     df_fail = pd.DataFrame(failed_list)
     df_fail.to_csv('Data/fail.csv',encoding='ANSI')
 

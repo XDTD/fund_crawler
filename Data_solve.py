@@ -99,6 +99,7 @@ def solve_f10_data():
     df.to_csv('Data/f10_ts/std and sharp ratio.csv',encoding='ANSI')
 
 
+
 def solve_crawler3():
     df = pd.read_csv('Data/crwaler3.csv',encoding='ANSI')
     data_list = {}
@@ -259,6 +260,9 @@ def solve_manager_info():
                 df.to_csv(dir,encoding='ANSI')
     df_manager_info_list = pd.DataFrame(manager_info_list)
     df_manager_info_list.to_csv('Data/manager.csv',encoding='ANSI')
+
+
+
 
 
 if __name__ == '__main__':
