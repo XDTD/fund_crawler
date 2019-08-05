@@ -16,7 +16,7 @@ if __name__ == '__main__':
     # 基金经理信息下载
     download_manager_info()
 
-    
+
     # std 和夏普比率信息处理
     solve_f10_data()
     # 基金经理信息处理
