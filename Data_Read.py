@@ -40,6 +40,6 @@ def data_read(rootDir):
             # df = data.astype(object).where(pd.notnull(data) , None)
             # tableName = os.path.splitext(list_name[i])[0].split('\\').pop()
             # df.to_sql(tableName, engine,if_exists='replace',index=False)
-    return data_list
+    return data_list,list_name
 
 

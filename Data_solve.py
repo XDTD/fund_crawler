@@ -2,6 +2,27 @@ import pandas as pd
 from datetime import datetime
 from Data_Read import *
 import re
+import math
+import sys
+
+
+def progress_bar(portion, total):
+    """
+    total 总数据大小，portion 已经传送的数据大小
+    :param portion: 已经接收的数据量
+    :param total: 总数据量
+    :return: 接收数据完成，返回True
+    """
+    part = total / 50  # 1%数据的大小
+    count = math.ceil(portion / part)
+    sys.stdout.write('\r')
+    sys.stdout.write(('[%-50s]%.2f%%' % (('>' * count), portion / total * 100)))
+    sys.stdout.flush()
+
+    if portion >= total:
+        sys.stdout.write('\n')
+        return True
+
 
 def data_select():
     benchmark_time = datetime.strptime('2015-05-04','%Y-%m-%d')
@@ -262,8 +283,33 @@ def solve_manager_info():
     df_manager_info_list.to_csv('Data/manager.csv',encoding='ANSI')
 
 
+def solve_risk_data():
+    rootDir = 'Data/risk/'
+    org_data_list ,list_name = data_read(rootDir)
+    data_list = {}
+    data_list['基金号'] = []
+    data_list['风险类别'] = []
+    data = pd.read_csv('Data/adjusted_net_value.csv')
+    idx = data.columns.values
+    for i in range(0,len(org_data_list)):
+        progress_bar(i,len(org_data_list))
+        a = re.findall(r'基金类型(.*?)基金规模',org_data_list[i])
+        code = re.findall('risk/(.*?)\.',list_name[i])[0]
+        code = '%06d' % int(code)
+        if code in idx:
+            if len(a)>0:
+                b = re.findall(r'&nbsp;&nbsp;\|&nbsp;&nbsp;(.*?)</td><td>',a[0])
+                if len(b)>0:
+                    data_list['风险类别'].append(b[0])
+                else:
+                    data_list['风险类别'].append('')
+            else:
+                data_list['风险类别'].append('')
 
+            data_list['基金号'].append(code)
+    df = pd.DataFrame(data_list)
+    df.to_csv('Data/risk.csv',encoding='ANSI')
 
 
 if __name__ == '__main__':
-    solve_manager_info()
+    solve_risk_data()
