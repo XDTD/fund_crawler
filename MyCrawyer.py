@@ -168,7 +168,7 @@ def download_f10_ts_data():
 
 
 def download_manager_info():
-    data = pd.read_csv('Data\instruments_ansi.csv',encoding='ANSI')
+    data = pd.read_csv('Data/instruments_ansi.csv',encoding='ANSI')
     code_list = data['code']
     for i in range(0,len(code_list)):
         progress_bar(i,len(code_list))
@@ -180,7 +180,21 @@ def download_manager_info():
             print(response,file =f)
 
 
+def download_risk_info():
+    data = pd.read_csv('Data/instruments_ansi.csv',encoding='ANSI')
+    code_list = data['code']
+    for i in range(0,len(code_list)):
+        progress_bar(i,len(code_list))
+        name = '%06d' % code_list[i]
+        url = 'http://fund.eastmoney.com/'+name+'.html'
+        file_name = 'Data/risk/'+name+'.json'
+        response = get_resonse(url)
+        with open(file_name,'w',encoding='utf-8') as f:
+            print(response,file =f)
+
+
 if __name__ == '__main__':
-    download_manager_info()
+    # download_manager_info()
     # solve_f10_data()
     # solve_fund_info()
+    download_risk_info()
