@@ -17,8 +17,6 @@ pip install requests
 
 **首先天天基金robots.txt内容如下**
 
-![image-20211231122030759](https://raw.githubusercontent.com/XDTD/ImgStg/main/image-20211231122030759.png)
-
 ```vbnet
 User-agent: * 
 Disallow: /*spm=*
