@@ -69,4 +69,4 @@ Disallow: /*aladin
 
 ## Todo
 
-经issue中用户anshe80的提示，adjusted_net_value.csv表格和/Data/fundInfo/目录都没有生成的方法，后续有时间会修复bug 
+经issue中用户anshe80的提示，adjusted_net_value.csv表格和/Data/fundInfo/目录都没有生成的方法，后续有时间会修复这个问题，现在可以通过手动创建文件/目录避免。模块之间比较独立， 这个问题不影响其他模块使用。
