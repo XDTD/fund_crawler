@@ -15,6 +15,20 @@ pip install requests
 
 ## 主要URL
 
+**首先天天基金robots.txt内容如下**
+
+![image-20211231122030759](https://raw.githubusercontent.com/XDTD/ImgStg/main/image-20211231122030759.png)
+
+```vbnet
+User-agent: * 
+Disallow: /*spm=*
+Disallow: /*aladin
+```
+
+表示不限制爬虫方式,不能爬取根目录下包含字符串'spm='的文件和根目录下'aladin'结尾的文件
+
+
+
 1. 公司列表：包含公司名和公司代码
    - 示例图
      ![image-20211231120534225](https://raw.githubusercontent.com/XDTD/ImgStg/main/image-20211231120534225.png)
