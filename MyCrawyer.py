@@ -160,7 +160,7 @@ def download_f10_ts_data():
     for i in range(0,len(code_list)):
         progress_bar(i,len(code_list))
         name = '%06d' % code_list[i]
-        url = 'http://fund.eastmoney.com/f10/tsdata_'+name+'.html'
+        url = 'http://fundf10.eastmoney.com/tsdata_'+name+'.html'
         file_name = 'Data/f10_ts/'+name+'.json'
         response = get_resonse(url)
         with open(file_name,'w',encoding='utf-8') as f:
